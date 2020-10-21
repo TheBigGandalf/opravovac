@@ -1,0 +1,7 @@
+﻿Pro opravení překlepů se může hodit funkce get_close_matches z vestavěné
+knihovny difflib:
+https://docs.python.org/2/library/difflib.html
+
+sem přidávejte odkazy na jakékoli externí knihovny nebo lexikony, které používáte:ň
+
+https://stackoverflow.com/questions/3939361/remove-specific-characters-from-a-string-in-python

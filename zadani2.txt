@@ -1,0 +1,7 @@
+﻿1. Napište program, který libovolnou šifrou zašifruje text zadaný uživatelem a druhý program, který šifru rozluští.
+
+1*. udělejte šifru silnou natolik, že by ji člověk neměl šanci vyluštit.
+
+2. Napište program, který přečte vstup zadaný uživatelem a s pomocí souboru syn2015_word_abc_utf8.tsv zkontroluje, jestli v něm nejsou překlepy.
+
+2*. Program z úkolu 2. upravte tak, aby rovnou překlepy co nejlépe opravil.
