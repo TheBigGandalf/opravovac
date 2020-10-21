@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e4647e18-959b-44c4-9024-2a8153b09f55" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oprav.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/opravit.py" beforeDir="false" afterPath="$PROJECT_DIR$/opravit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zadani2.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603302834447</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="vymazání přebytečného kódu">
+      <created>1603303933142</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603303933142</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

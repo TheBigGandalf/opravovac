@@ -37,14 +37,20 @@ pocet_radku = 0
 
 slovnik = {}
 
-if len(sys.argv) == 3:
-    _, input_path, output_path = sys.argv  # poté, co to bude aspoň trochu fungovat přidat output file
+if len(sys.argv) == 4:
+    _, input_path, output_path, odbornost  = sys.argv  # poté, co to bude aspoň trochu fungovat přidat output file
 else:
-    print("napiš: kromě python opravit.py napiš co chceš opravit a kam to chceš nahrát")
+    print("napiš: kromě python opravit.py napiš co chceš opravit, kam to chceš nahrát a od 1 do 5 (5 nejodbornější)jak moc odborný text necháváš přeložit.")
+    exit()
+
+odbornost = int(odbornost)
+if odbornost > 5: odbornost = 5 #volbu čísel nemám na ničem založenou, přišlo mi to ale jako zajímavý prvek
+elif odbornost < 1: odbornost = 1 #kdyby bylo zadáno větší či menší číslo aby kód nevyhazoval blbosti
+odbornost = 6 - odbornost
+
 
 with open(input_path, 'r',encoding="utf8") as input_file: # přepsání textu do listu
     f = input_file.read
-
     dznak = len(f)
 
     f = f.replace("\n"," @#$ ")
@@ -113,23 +119,19 @@ def cekuj():
             podobne = get_close_matches(slovo, slovnik.keys(), 3, 0.4)# zrychlit a upřesnit
 
             for slovicko in podobne:
-                if slovnik[slovicko] > lhfrq + 700:
+                if slovnik[slovicko] > lhfrq + odbornost * 125 + 200: # jestli není nějaký z překladů výrazně častější
                     lpp = lp
                 lp += 1
 
             text[p] = text[p].replace(text[p], podobne[lpp])
 
-        progres2 = str(round((p / len(text)) * 100)) + "%"
+        progres2 = str(round((p / len(text)) * 100)) + "%" # informuje o kolik toho už stihl opravit
         if progres != progres2:
             print(progres2)
             progres = progres2
 
 
         p += 1
-
-
-
-
 
 
 def zvlast_vracec():
