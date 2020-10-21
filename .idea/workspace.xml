@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4647e18-959b-44c4-9024-2a8153b09f55" name="Default Changelist" comment="" />
+    <list default="true" id="e4647e18-959b-44c4-9024-2a8153b09f55" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opravit.py" beforeDir="false" afterPath="$PROJECT_DIR$/opravit.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +20,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1j0F72kL70L21VQ97ge8FTiWSBe" />
   <component name="PropertiesComponent">
@@ -68,6 +74,29 @@
       <option name="presentableId" value="Default" />
       <updated>1602932931970</updated>
     </task>
+    <task id="LOCAL-00001" summary="vymazání přebytečného kódu">
+      <created>1603302834447</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603302834447</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="vymazání přebytečného kódu" />
+    <option name="LAST_COMMIT_MESSAGE" value="vymazání přebytečného kódu" />
   </component>
 </project>
