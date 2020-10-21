@@ -172,39 +172,3 @@ correct_text(user_text)
 # ls - ukaže co je ve společné složce
 # cd - posune se do zvolené složky
 """
-"""
-import json
-from difflib import get_close_matches
-data = json.load(open("data.json"))
-vocabulary = []
-for x in data.keys():
-    vocabulary.append(x)
-
-i = input("Write and I'll check: ")
-text = i.split()
-otxt=""
-def cekuj(text):
-    for slovo in text:
-        if slovo in data.keys():
-            otxt += " " + slovo
-        else:
-            if len(get_close_matches(slovo, data.keys())) > 0:
-                yn = input("Did you mean %s instead? Enter Y if yes, or N if no: " % get_close_matches(w, data.keys())[0])
-                if yn == "Y":
-                    return
-                elif yn == "N":
-                    return "Slovo n"
-                else:
-                    return "We didn't understand your entry."
-            else:
-                return "The word doesn't exist. Please double check it."
-
-print(text)
-
-
-
-
-
-correct_text(user_text)
-
-"""

@@ -1,4 +1,6 @@
 """
+FUNGUJÍCÍ VERZE NA opravit.py
+
 1. slova z textu do seznamupo jednom slově  MÁM
 2. řešení zvláštních znaků  1.ČÁST MÁM
     (jednotlivá slova jako elementy v seznamu--> sčekuje jestli první nebo poslední znak elementu je v seznamu zvláštních znaků, když je, vymaže znak a přidá do library společně s místem ze kterého to vzalo ( rizikové jednoznakové elementy))
