@@ -50,8 +50,8 @@ odbornost = 6 - odbornost
 
 
 with open(input_path, 'r',encoding="utf8") as input_file: # přepsání textu do listu
-    f = input_file.read
-    dznak = len(f)
+    f = input_file.read()
+
 
     f = f.replace("\n"," @#$ ")
     text = f.split(" ")
