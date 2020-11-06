@@ -6,9 +6,9 @@
 4. opětovné bepsání do textu
 
 PROBLÉMY:
-- nezvládne vyřešit chybějící mezeru nebo mezeru uprostřed slova
+- nezvládne vyřešit chybějící nebo naopak přebývající mezeru
 -strašně pomalé
-- nebere v potaz vedlejší slova--> strašně pomalé
+- nebere v potaz vedlejší slova
 
 Možná zlepšení:
 - lépe vykalibrovat nastavení getclosematch a přidávání frq
@@ -20,6 +20,8 @@ Možná zlepšení:
 
 
 """
+
+"""NAPIŠ: kromě python opravit.py napiš co chceš opravit, kam to chceš nahrát a úroveň odbornosti textu od 1 do 5 (5 nejodbornější). """
 import json
 import sys
 from difflib import get_close_matches
@@ -32,15 +34,16 @@ text = []
 textodst = []
 otext = "" #opravený text
 p = 0
+pp = 0
 
 pocet_radku = 0
 
 slovnik = {}
 
 if len(sys.argv) == 4:
-    _, input_path, output_path, odbornost  = sys.argv  # poté, co to bude aspoň trochu fungovat přidat output file
+    _, input_path, output_path, odbornost  = sys.argv
 else:
-    print("napiš: kromě python opravit.py napiš co chceš opravit, kam to chceš nahrát a od 1 do 5 (5 nejodbornější)jak moc odborný text necháváš přeložit.")
+    print("napiš: kromě python opravit.py napiš co chceš opravit, kam to chceš nahrát a úroveň odbornosti textu od 1 do 5 (5 nejodbornější).")
     exit()
 
 odbornost = int(odbornost)
@@ -56,7 +59,7 @@ with open(input_path, 'r',encoding="utf8") as input_file: # přepsání textu do
     f = f.replace("\n"," @#$ ")
     text = f.split(" ")
 
-
+print(text)
 
 def najdi_zvlastni_znaky(txt): #najde zvláštní znaky vyndá je ze seznamu a přířadí k nim číslo místa, kde se nacházeli (v textu, ve slově(poslední první jinak bby mohl nastat problém s změnou indexu po smazání či přidání písmen))
     zvlastni_znaky_text = []
@@ -86,6 +89,9 @@ def najdi_zvlastni_znaky(txt): #najde zvláštní znaky vyndá je ze seznamu a p
     return zvlastni_znaky_text
 
 
+
+
+
 def load_vocabulary(path):
     with open(path, 'r', encoding="utf8") as input_file:
         for line in input_file:
@@ -104,7 +110,6 @@ def cekuj():
     progres = ""
 
 
-    #podobne =  []
 
     for slovo in text:
         if slovo in slovnik:
@@ -159,6 +164,31 @@ def prepis (): # vytvoří dokument do kterého vepíše opravený text
                 dokument.write("\n")
         print("opravený soubor uložen do " + output_path)
 
+
+#zrychlit kontrolování tím, že text rozdělím na více částí po 15 slovech, které pak kontroluji součastně, na poslední
+seznam = []
+pripravtext = []
+ppp = 0
+for slovo in text:
+    seznam.append(slovo)
+    pp += 1
+
+    if p >=15:
+        seznam.append(ppp)
+        pripravtext.append(seznam)
+        seznam =[]
+        p=0
+        ppp += 1
+    elif pp == len(text):
+        seznam.append(ppp)
+        pripravtext.append(seznam)
+        seznam = []
+        pp = 0
+        ppp=0
+
+    p += 1
+
+print(pripravtext)
 
 
 zvlastni_znaky = najdi_zvlastni_znaky(text)

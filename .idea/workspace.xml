@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4647e18-959b-44c4-9024-2a8153b09f55" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VD.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VD.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opravit.py" beforeDir="false" afterPath="$PROJECT_DIR$/opravit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preklepy-spanel.py" beforeDir="false" afterPath="$PROJECT_DIR$/preklepy-spanel.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +105,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
